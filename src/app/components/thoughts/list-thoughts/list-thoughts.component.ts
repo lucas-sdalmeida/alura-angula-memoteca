@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListThoughtsComponent implements OnInit {
 
+  thoughtsLists = []
+
   constructor() { }
 
   ngOnInit(): void {
