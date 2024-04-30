@@ -23,8 +23,8 @@
         Prévia
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/modelo1.png" alt="Aspas azuis">
-          <p class="conteudo">Aqui vai o conteudo</p>
-          <p class=""><b>Aqui vai o conteudo</b></p>
+          <p class="conteudo">{{ thought?.content || 'Aqui vai o conteudo' }}</p>
+          <p class="autoria"><b>{{ thought?.authorship || 'Aqui vai o conteudo' }}</b></p>
         </div>
       </div>
 
@@ -40,8 +40,8 @@
         Prévia
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/modelo2.png" alt="Aspas azul claro">
-          <p class="conteudo">Aqui vai o conteudo</p>
-          <p class=""><b>Aqui vai o conteudo</b></p>
+          <p class="conteudo">{{ thought?.content || 'Aqui vai o conteudo' }}</p>
+          <p class="autoria"><b>{{ thought?.authorship || 'Aqui vai o conteudo' }}</b></p>
         </div>
       </div>
 
@@ -57,15 +57,15 @@
         Prévia
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="../../../../assets/modelo3.png" alt="Aspas verdes">
-          <p class="conteudo">Aqui vai o conteudo</p>
-          <p class=""><b>Aqui vai o conteudo</b></p>
+          <p class="conteudo">{{ thought?.content || 'Aqui vai o conteudo' }}</p>
+          <p class="autoria"><b>{{ thought?.authorship || 'Aqui vai o conteudo' }}</b></p>
         </div>
       </div>
     </div>
 
     <div class="acoes">
-      <button class="botao">Salvar</button>
-      <button class="botao">Cancelar</button>
+      <button (click)="createThought()" class="botao">Salvar</button>
+      <button (click)="cancel()" class="botao">Cancelar</button>
     </div>
   </form>
 </section>

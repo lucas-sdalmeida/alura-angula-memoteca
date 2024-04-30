@@ -6,10 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-thought.component.css']
 })
 export class CreateThoughtComponent implements OnInit {
+  thought?: {
+    id: number,
+    content: string,
+    authorship: string,
+    model: string,
+  }
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  createThought() {
+
+  }
+
+  cancel() {
+
   }
 
 }
