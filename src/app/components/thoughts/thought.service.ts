@@ -14,8 +14,16 @@ export class ThoughtService {
     return this.client.get<Thought[]>(URL)
   }
 
+  getById(id: number) {
+    return this.client.get<Thought>(`${URL}/${id}`)
+  }
+
   post(thought: Thought) {
     return this.client.post<Thought>(URL, thought)
+  }
+
+  delete(id: number) {
+    return this.client.delete<Thought>(`${URL}/${id}`)
   }
 }
 
