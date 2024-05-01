@@ -25,5 +25,9 @@ export class ThoughtService {
   delete(id: number) {
     return this.client.delete<Thought>(`${URL}/${id}`)
   }
+
+  put(thought: Thought) {
+    return this.client.put<Thought>(`${URL}/${thought.id}`, thought)
+  }
 }
 

@@ -11,6 +11,7 @@ import { ListThoughtsComponent } from './components/thoughts/list-thoughts/list-
 import { ThoughtComponent } from './components/thoughts/thought/thought.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ExcludeThoughtComponent } from './components/thoughts/exclude-thought/exclude-thought.component';
+import { EditThoughtComponent } from './components/thoughts/edit-thought/edit-thought.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ExcludeThoughtComponent } from './components/thoughts/exclude-thought/e
     CreateThoughtComponent,
     ListThoughtsComponent,
     ThoughtComponent,
-    ExcludeThoughtComponent
+    ExcludeThoughtComponent,
+    EditThoughtComponent
   ],
   imports: [
     BrowserModule,
