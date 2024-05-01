@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Thought } from '../thought';
+import { ThoughtService } from '../thought.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-thought',
@@ -14,13 +16,17 @@ export class CreateThoughtComponent implements OnInit {
     model: '',
   }
 
-  constructor() { }
+  constructor(
+    private service: ThoughtService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
   }
 
   createThought() {
-
+    this.service
+      .post(this.thought)
+      .subscribe(() => this.router.navigate(['/list-thoughts']))
   }
-
 }
