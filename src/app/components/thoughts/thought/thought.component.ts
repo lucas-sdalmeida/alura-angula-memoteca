@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Thought } from '../thought';
 
 @Component({
   selector: 'app-thought',
@@ -6,7 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./thought.component.css']
 })
 export class ThoughtComponent implements OnInit {
-  @Input() thought = {
+  @Input() thought: Thought = {
+    id: 0,
     content: '',
     authorship: '',
     model: '',
